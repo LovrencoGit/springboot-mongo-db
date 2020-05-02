@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "c4e3e7a6-7c84-4b1a-8195-f63d8f4053e5",
+		"name": "learn MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delete by _id Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "33cf1478-8246-4c00-b079-018875318cc1",
+						"exec": [
+							"console.log(\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Loris\",\n    \"loves\": [\n        \"soccer\",\n        \"programming\",\n        \"sing\"\n    ],\n    \"weight\": 87,\n    \"gender\": \"m\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/unicorn/5df8f9cb46b77b24e1cd033c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"unicorn",
+						"5df8f9cb46b77b24e1cd033c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "33cf1478-8246-4c00-b079-018875318cc1",
+						"exec": [
+							"console.log(\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \n    \"name\": \"Loris\",\n    \"loves\": [\n        \"soccer\",\n        \"programming\",\n        \"sing\"\n    ],\n    \"weight\": 87,\n    \"gender\": \"m\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/unicorn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"unicorn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete by _id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "33cf1478-8246-4c00-b079-018875318cc1",
+						"exec": [
+							"console.log(\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Loris\",\n    \"loves\": [\n        \"soccer\",\n        \"programming\",\n        \"sing\"\n    ],\n    \"weight\": 87,\n    \"gender\": \"m\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/unicorn/5df7af7e124a777c4bb01d3b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"unicorn",
+						"5df7af7e124a777c4bb01d3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update \"loves\"",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "33cf1478-8246-4c00-b079-018875318cc1",
+						"exec": [
+							"console.log(\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Loris\",\n    \"loves\": [\n        \"soccer\",\n        \"programming\",\n        \"sing\"\n    ],\n    \"weight\": 87,\n    \"gender\": \"m\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/unicorn/5df7b5aed4f5c23d5e3d2cb5/loves?loves=a,b,c,d,e,f,g,h,i,j",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"unicorn",
+						"5df7b5aed4f5c23d5e3d2cb5",
+						"loves"
+					],
+					"query": [
+						{
+							"key": "loves",
+							"value": "a,b,c,d,e,f,g,h,i,j"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "33cf1478-8246-4c00-b079-018875318cc1",
+						"exec": [
+							"console.log(\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"idUnicorn\" : \"5df8f9cb46b77b24e1cd033c\",\n    \"name\": \"Loris\",\n    \"loves\": [\n        \"soccer\",\n        \"programming\",\n        \"sing\",\n        \"planning\",\n        \"sport\",\n        \"netflix\"\n    ],\n    \"weight\": 87,\n    \"gender\": \"m\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/unicorn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"unicorn"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
